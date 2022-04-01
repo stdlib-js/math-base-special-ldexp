@@ -1,0 +1,35 @@
+{
+  "name": "@stdlib/math-base-special-ldexp",
+  "version": "0.0.0",
+  "description": "Multiply a double-precision floating-point number by an integer power of two.",
+  "license": "Apache-2.0",
+  "main": "./bundle.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/math-base-special-ldexp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "math",
+    "mathematics",
+    "frexp",
+    "ldexp",
+    "load",
+    "exponent",
+    "double",
+    "dbl",
+    "float",
+    "floating-point",
+    "number",
+    "ieee754"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
