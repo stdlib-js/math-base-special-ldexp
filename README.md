@@ -33,6 +33,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+ldexp = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-ldexp/tags). For example,
+
+```javascript
 ldexp = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@v0.0.8-umd/browser.js' )
 ```
 
@@ -45,7 +50,7 @@ var ldexp = require( 'path/to/vendor/umd/math-base-special-ldexp/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@v0.0.8-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -115,7 +120,7 @@ x = ldexp( -Infinity, -118 );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-pow@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-frexp@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@v0.0.8-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
