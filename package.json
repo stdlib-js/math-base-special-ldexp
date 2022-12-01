@@ -49,7 +49,8 @@
     "@stdlib/number-float64-base-exponent": "^0.0.x",
     "@stdlib/number-float64-base-from-words": "^0.0.x",
     "@stdlib/number-float64-base-normalize": "^0.0.x",
-    "@stdlib/number-float64-base-to-words": "^0.0.x"
+    "@stdlib/number-float64-base-to-words": "^0.0.x",
+    "@stdlib/error-tools-fmtprodmsg": "^0.0.x"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.0.x",
