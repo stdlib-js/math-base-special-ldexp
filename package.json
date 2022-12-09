@@ -45,11 +45,14 @@
     "@stdlib/constants-float64-pinf": "^0.0.x",
     "@stdlib/math-base-assert-is-infinite": "^0.0.x",
     "@stdlib/math-base-assert-is-nan": "^0.0.x",
+    "@stdlib/math-base-special-abs": "^0.0.x",
     "@stdlib/math-base-special-copysign": "^0.0.x",
+    "@stdlib/number-float32-base-to-word": "^0.0.x",
     "@stdlib/number-float64-base-exponent": "^0.0.x",
     "@stdlib/number-float64-base-from-words": "^0.0.x",
     "@stdlib/number-float64-base-normalize": "^0.0.x",
-    "@stdlib/number-float64-base-to-words": "^0.0.x"
+    "@stdlib/number-float64-base-to-words": "^0.0.x",
+    "@stdlib/utils-library-manifest": "^0.0.x"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.0.x",
@@ -59,6 +62,7 @@
     "@stdlib/math-base-special-pow": "^0.0.x",
     "@stdlib/math-base-special-round": "^0.0.x",
     "@stdlib/random-base-randu": "^0.0.x",
+    "@stdlib/utils-try-require": "^0.0.x",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "2.x.x"
