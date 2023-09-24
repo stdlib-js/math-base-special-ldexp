@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import ldexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-ldexp/tags). For example,
+
+```javascript
 import ldexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@v0.1.0-deno/mod.js';
 ```
 
@@ -99,7 +104,7 @@ import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@deno/mod.js';
 import pow from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-pow@deno/mod.js';
 import frexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-frexp@deno/mod.js';
-import ldexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@v0.1.0-deno/mod.js';
+import ldexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@deno/mod.js';
 
 var sign;
 var frac;
