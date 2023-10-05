@@ -54,7 +54,8 @@
     "@stdlib/number-float64-base-from-words": "^0.1.0",
     "@stdlib/number-float64-base-normalize": "^0.1.0",
     "@stdlib/number-float64-base-to-words": "^0.1.0",
-    "@stdlib/utils-library-manifest": "^0.1.1"
+    "@stdlib/utils-library-manifest": "^0.1.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.1.1"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.1.0",
