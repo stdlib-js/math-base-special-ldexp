@@ -31,10 +31,10 @@ var ldexp = require( './../../dist' );
 
 // FIXTURES //
 
-var small = require( './../..xtures/julia/small.json' );
-var medium = require( './../..xtures/julia/medium.json' );
-var large = require( './../..xtures/julia/large.json' );
-var subnormal = require( './../..xtures/julia/subnormal.json' );
+var small = require( './../fixtures/julia/small.json' );
+var medium = require( './../fixtures/julia/medium.json' );
+var large = require( './../fixtures/julia/large.json' );
+var subnormal = require( './../fixtures/julia/subnormal.json' );
 
 
 // TESTS //
