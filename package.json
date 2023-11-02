@@ -3,8 +3,33 @@
   "version": "0.1.0",
   "description": "Multiply a double-precision floating-point number by an integer power of two.",
   "license": "Apache-2.0",
-  "type": "module",
-  "main": "./mod.js",
+  "author": {
+    "name": "The Stdlib Authors",
+    "url": "https://github.com/stdlib-js/stdlib/graphs/contributors"
+  },
+  "contributors": [
+    {
+      "name": "The Stdlib Authors",
+      "url": "https://github.com/stdlib-js/stdlib/graphs/contributors"
+    }
+  ],
+  "main": "./lib",
+  "directories": {
+    "benchmark": "./benchmark",
+    "doc": "./docs",
+    "example": "./examples",
+    "include": "./include",
+    "lib": "./lib",
+    "src": "./src",
+    "test": "./test"
+  },
+  "types": "./docs/types",
+  "scripts": {
+    "test": "make test",
+    "test-cov": "make test-cov",
+    "examples": "make examples",
+    "benchmark": "make benchmark"
+  },
   "homepage": "https://stdlib.io",
   "repository": {
     "type": "git",
@@ -13,6 +38,53 @@
   "bugs": {
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
+  "dependencies": {
+    "@stdlib/constants-float64-exponent-bias": "^0.1.1",
+    "@stdlib/constants-float64-max-base2-exponent": "^0.1.1",
+    "@stdlib/constants-float64-max-base2-exponent-subnormal": "^0.1.1",
+    "@stdlib/constants-float64-min-base2-exponent-subnormal": "^0.1.1",
+    "@stdlib/constants-float64-ninf": "^0.1.1",
+    "@stdlib/constants-float64-pinf": "^0.1.1",
+    "@stdlib/math-base-assert-is-infinite": "^0.1.1",
+    "@stdlib/math-base-assert-is-nan": "^0.1.1",
+    "@stdlib/math-base-special-abs": "^0.1.1",
+    "@stdlib/math-base-special-copysign": "^0.1.0",
+    "@stdlib/number-float32-base-to-word": "^0.1.1",
+    "@stdlib/number-float64-base-exponent": "^0.1.1",
+    "@stdlib/number-float64-base-from-words": "^0.1.1",
+    "@stdlib/number-float64-base-normalize": "^0.1.1",
+    "@stdlib/number-float64-base-to-words": "^0.1.1",
+    "@stdlib/utils-library-manifest": "^0.1.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.1.1"
+  },
+  "devDependencies": {
+    "@stdlib/bench": "^0.1.0",
+    "@stdlib/math-base-assert-is-negative-zero": "^0.1.1",
+    "@stdlib/math-base-assert-is-positive-zero": "^0.1.1",
+    "@stdlib/math-base-special-frexp": "^0.1.0",
+    "@stdlib/math-base-special-pow": "^0.1.0",
+    "@stdlib/math-base-special-round": "^0.1.1",
+    "@stdlib/random-base-randu": "^0.1.0",
+    "@stdlib/utils-try-require": "^0.1.1",
+    "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
+    "istanbul": "^0.4.1",
+    "tap-min": "git+https://github.com/Planeshifter/tap-min.git"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">2.7.0"
+  },
+  "os": [
+    "aix",
+    "darwin",
+    "freebsd",
+    "linux",
+    "macos",
+    "openbsd",
+    "sunos",
+    "win32",
+    "windows"
+  ],
   "keywords": [
     "stdlib",
     "stdmath",
