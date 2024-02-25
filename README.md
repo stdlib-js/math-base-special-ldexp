@@ -35,32 +35,38 @@ limitations under the License.
 
 > Multiply a [double-precision floating-point number][ieee754] by an integer power of two.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/math-base-special-ldexp
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var ldexp = require( '@stdlib/math-base-special-ldexp' );
+ldexp = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var ldexp = require( 'path/to/vendor/umd/math-base-special-ldexp/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.ldexp;
+})();
+</script>
 ```
 
 #### ldexp( frac, exp )
@@ -112,12 +118,17 @@ x = ldexp( -Infinity, -118 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var randu = require( '@stdlib/random-base-randu' );
-var round = require( '@stdlib/math-base-special-round' );
-var pow = require( '@stdlib/math-base-special-pow' );
-var frexp = require( '@stdlib/math-base-special-frexp' );
-var ldexp = require( '@stdlib/math-base-special-ldexp' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-pow@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-frexp@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var sign;
 var frac;
@@ -145,6 +156,11 @@ for ( i = 0; i < 100; i++ ) {
     v = ldexp( f[ 0 ], f[ 1 ] );
     console.log( '%d = %d * 2^%d = %d', x, f[ 0 ], f[ 1 ], v );
 }
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -153,117 +169,7 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/math/base/special/ldexp.h"
-```
-
-#### stdlib_base_ldexp( frac, exp )
-
-Multiplies a [double-precision floating-point number][ieee754] by an integer power of two (i.e., `x = frac * 2^exp`).
-
-```c
-double x = stdlib_base_ldexp( 0.5, 3 ); // => 0.5 * 2^3 = 0.5 * 8
-// returns 4.0
-```
-
-The function accepts the following arguments:
-
--   **frac**: `[in] double` input value.
--   **exp**: `[in] int32_t` integer power of two.
-
-```c
-double stdlib_base_ldexp( const double frac, const int32_t exp );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/math/base/special/ldexp.h"
-#include "stdlib/math/base/special/frexp.h"
-#include <stdlib.h>
-#include <stdint.h>
-#include <stdio.h>
-#include <inttypes.h>
-#include <math.h>
-
-static double rand_double() {
-    int r = rand();
-    return (double)r / ( (double)RAND_MAX + 1.0 );
-}
-
-int main( void ) {
-    double sign;
-    double frac;
-    int32_t exp;
-    double x;
-    double v;
-    int i;
-
-    for ( i = 0; i < 100; i++ ) {
-        if ( rand_double() < 0.5 ) {
-            sign = -1.0;
-        } else {
-            sign = 1.0;
-        }
-        // Generate a random number:
-        frac = rand_double() * 10.0;
-        exp = (int32_t)( rand_double()*616.0 ) - 308;
-        x = sign * frac * pow( 10.0, exp );
-
-        // Break the number into a normalized fraction and an integer power of two:
-        stdlib_base_frexp( x, &frac, &exp );
-
-        // Reconstitute the original number:
-        v = stdlib_base_ldexp( frac, exp );
-
-        printf( "%e = %lf * 2^%" PRId32 " = %e\n", x, frac, exp, v );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -355,7 +261,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/frexp]: https://github.com/stdlib-js/math-base-special-frexp
+[@stdlib/math/base/special/frexp]: https://github.com/stdlib-js/math-base-special-frexp/tree/umd
 
 <!-- </related-links> -->
 
