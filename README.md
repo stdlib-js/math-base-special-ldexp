@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import ldexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-ldexp/tags). For example,
+
+```javascript
 import ldexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@v0.2.2-esm/index.mjs';
 ```
 
@@ -104,7 +109,7 @@ import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/i
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
 import pow from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-pow@esm/index.mjs';
 import frexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-frexp@esm/index.mjs';
-import ldexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@v0.2.2-esm/index.mjs';
+import ldexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@esm/index.mjs';
 
 var sign;
 var frac;
