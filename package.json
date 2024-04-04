@@ -55,7 +55,8 @@
     "@stdlib/number-float64-base-from-words": "^0.2.1",
     "@stdlib/number-float64-base-normalize": "^0.2.1",
     "@stdlib/number-float64-base-to-words": "^0.2.1",
-    "@stdlib/utils-library-manifest": "^0.2.1"
+    "@stdlib/utils-library-manifest": "^0.2.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.1"
   },
   "devDependencies": {
     "@stdlib/math-base-assert-is-negative-zero": "^0.2.1",
