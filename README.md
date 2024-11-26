@@ -35,14 +35,32 @@ limitations under the License.
 
 > Multiply a [double-precision floating-point number][ieee754] by an integer power of two.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-ldexp
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import ldexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@esm/index.mjs';
+var ldexp = require( '@stdlib/math-base-special-ldexp' );
 ```
 
 #### ldexp( frac, exp )
@@ -94,17 +112,12 @@ x = ldexp( -Infinity, -118 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
-import pow from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-pow@esm/index.mjs';
-import frexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-frexp@esm/index.mjs';
-import ldexp from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ldexp@esm/index.mjs';
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var round = require( '@stdlib/math-base-special-round' );
+var pow = require( '@stdlib/math-base-special-pow' );
+var frexp = require( '@stdlib/math-base-special-frexp' );
+var ldexp = require( '@stdlib/math-base-special-ldexp' );
 
 var sign;
 var frac;
@@ -132,10 +145,6 @@ for ( i = 0; i < 100; i++ ) {
     v = ldexp( f[ 0 ], f[ 1 ] );
     console.log( '%d = %d * 2^%d = %d', x, f[ 0 ], f[ 1 ], v );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -144,7 +153,92 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/ldexp.h"
+```
+
+#### stdlib_base_ldexp( frac, exp )
+
+Multiplies a [double-precision floating-point number][ieee754] by an integer power of two (i.e., `x = frac * 2^exp`).
+
+```c
+double x = stdlib_base_ldexp( 0.5, 3 ); // => 0.5 * 2^3 = 0.5 * 8
+// returns 4.0
+```
+
+The function accepts the following arguments:
+
+-   **frac**: `[in] double` input value.
+-   **exp**: `[in] int32_t` integer power of two.
+
+```c
+double stdlib_base_ldexp( const double frac, const int32_t exp );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/ldexp.h"
+#include <stdint.h>
+#include <stdio.h>
+
+int main( void ) {
+    double y;
+    int i;
+
+    const double frac[] = { 0.5, 5.0, 0.0, 3.5, 7.9 };
+    const int32_t exp[] = { 3, -2, 20, 39, 14 };
+
+    for ( i = 0; i < 5; i++ ) {
+        y = stdlib_base_ldexp( frac[ i ], exp[ i ] );
+        printf( "ldexp(%lf, %d) = %lf\n", frac[ i ], exp[ i ], y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -169,7 +263,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -236,7 +330,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/frexp]: https://github.com/stdlib-js/math-base-special-frexp/tree/esm
+[@stdlib/math/base/special/frexp]: https://github.com/stdlib-js/math-base-special-frexp
 
 <!-- </related-links> -->
 
