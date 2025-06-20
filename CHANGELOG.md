@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-04-07)
+## Unreleased (2025-06-20)
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`6b1c190`](https://github.com/stdlib-js/stdlib/commit/6b1c1902e586b2a2437f5b97f6abe4b4c780da92) - use correct dependency in manifest.json
+
+</section>
+
+<!-- /.bug-fixes -->
 
 <section class="reverts">
 
@@ -22,6 +32,7 @@
 
 <details>
 
+-   [`6b1c190`](https://github.com/stdlib-js/stdlib/commit/6b1c1902e586b2a2437f5b97f6abe4b4c780da92) - **fix:** use correct dependency in manifest.json _(by Philipp Burckhardt)_
 -   [`630ddb7`](https://github.com/stdlib-js/stdlib/commit/630ddb777824b5f6e501fda6dadf4ce41dccb964) - **test:** replace equal with strictEqual _(by Karan Anand)_
 -   [`2a10dde`](https://github.com/stdlib-js/stdlib/commit/2a10dde4b821cf7d96fcd76339beac03e9548f47) - **bench:** update benchmarks and examples in `math/base/special/ldexp` [(#2781)](https://github.com/stdlib-js/stdlib/pull/2781) _(by Gunj Joshi, stdlib-bot)_
 -   [`b0e68c5`](https://github.com/stdlib-js/stdlib/commit/b0e68c5bc8ee985794eb2ea1791c9337cd15fbd0) - **chore:** update to modern benchmark Makefile _(by Philipp Burckhardt)_
