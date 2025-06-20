@@ -10,6 +10,7 @@
 
 ### Bug Fixes
 
+-   [`e82e559`](https://github.com/stdlib-js/stdlib/commit/e82e5599a98d97a288e946f93f59eaccd6572c5a) - remove unused `abs` dependency from `ldexp` manifest
 -   [`6b1c190`](https://github.com/stdlib-js/stdlib/commit/6b1c1902e586b2a2437f5b97f6abe4b4c780da92) - use correct dependency in manifest.json
 
 </section>
@@ -32,6 +33,7 @@
 
 <details>
 
+-   [`e82e559`](https://github.com/stdlib-js/stdlib/commit/e82e5599a98d97a288e946f93f59eaccd6572c5a) - **fix:** remove unused `abs` dependency from `ldexp` manifest _(by Philipp Burckhardt)_
 -   [`6b1c190`](https://github.com/stdlib-js/stdlib/commit/6b1c1902e586b2a2437f5b97f6abe4b4c780da92) - **fix:** use correct dependency in manifest.json _(by Philipp Burckhardt)_
 -   [`630ddb7`](https://github.com/stdlib-js/stdlib/commit/630ddb777824b5f6e501fda6dadf4ce41dccb964) - **test:** replace equal with strictEqual _(by Karan Anand)_
 -   [`2a10dde`](https://github.com/stdlib-js/stdlib/commit/2a10dde4b821cf7d96fcd76339beac03e9548f47) - **bench:** update benchmarks and examples in `math/base/special/ldexp` [(#2781)](https://github.com/stdlib-js/stdlib/pull/2781) _(by Gunj Joshi, stdlib-bot)_
