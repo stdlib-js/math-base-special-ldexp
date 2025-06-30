@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-21)
+## Unreleased (2025-06-30)
 
 <section class="bug-fixes">
 
@@ -45,6 +45,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`6471b8e`](https://github.com/stdlib-js/stdlib/commit/6471b8e01fdce8657278f83e0921faef23e6622e) - **docs:** minor clean-up _(by Philipp Burckhardt)_
 -   [`3e45add`](https://github.com/stdlib-js/stdlib/commit/3e45adda10132ea8f55ad60c1504c8fd19b0841d) - **chore:** address commit comments for commit `6b1c190` [(#7431)](https://github.com/stdlib-js/stdlib/pull/7431) _(by Lokesh Ranjan)_
 -   [`e82e559`](https://github.com/stdlib-js/stdlib/commit/e82e5599a98d97a288e946f93f59eaccd6572c5a) - **fix:** remove unused `abs` dependency from `ldexp` manifest _(by Philipp Burckhardt)_
 -   [`6b1c190`](https://github.com/stdlib-js/stdlib/commit/6b1c1902e586b2a2437f5b97f6abe4b4c780da92) - **fix:** use correct dependency in manifest.json _(by Philipp Burckhardt)_
