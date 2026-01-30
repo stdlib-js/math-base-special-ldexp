@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-special-ldexp",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Multiply a double-precision floating-point number by an integer power of two.",
   "license": "Apache-2.0",
   "author": {
@@ -53,7 +53,7 @@
     "@stdlib/number-float64-base-from-words": "^0.2.2",
     "@stdlib/number-float64-base-normalize": "^0.2.3",
     "@stdlib/number-float64-base-to-words": "^0.2.2",
-    "@stdlib/utils-library-manifest": "^0.2.2"
+    "@stdlib/utils-library-manifest": "^0.2.3"
   },
   "devDependencies": {
     "@stdlib/math-base-assert-is-negative-zero": "^0.2.2",
