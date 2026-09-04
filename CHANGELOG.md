@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-07-26)
+## Unreleased (2026-09-04)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`8325057`](https://github.com/stdlib-js/stdlib/commit/8325057f59dacc6c43fbb3fa5c1026bf3cc5c296) - **docs:** add equations [(#14695)](https://github.com/stdlib-js/stdlib/pull/14695) _(by Karan Anand)_
 -   [`8c2f1cf`](https://github.com/stdlib-js/stdlib/commit/8c2f1cf76b36300b8674f4fc0e4d020dab2b0f55) - **bench:** refactor to use string interpolation in `math/base/special` [(#11389)](https://github.com/stdlib-js/stdlib/pull/11389) _(by Karan Anand)_
 
 </details>
